@@ -1,10 +1,12 @@
 require "minitest/autorun"
 require_relative "addingnumbers.rb"
-class Addition_test < Minitest::Test
-	
-	def test_1_equals_1
-		assert_equal(1,2)
-	end
+require_relative "subtracting.rb"
+require_relative "division.rb"
+# calls and uses information from different files
+
+
+class Math_test < Minitest::Test
+#	
 
 	def test_2
 		num1 = 7
@@ -17,7 +19,20 @@ class Addition_test < Minitest::Test
 		y = 5
 		assert_equal(15, add2(x,y))
 	end
+
+	def test_4
+		x = 20
+		y = 3
+		assert_equal(17, subtract(x,y))
+	end
+
+	def test_5 
+		num1 = 30
+		num2 = 2
+		assert_equal(15, division(num1,num2))
+	end
 end
+
 
 
 
