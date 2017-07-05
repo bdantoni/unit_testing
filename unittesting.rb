@@ -1,8 +1,9 @@
 require "minitest/autorun"
-
+require_relative "addingnumbers.rb"
 class Addition_test < Minitest::Test
-	def add(num1, num2)
-		num1 + num2
+	
+	def test_1_equals_1
+		assert_equal(1,2)
 	end
 
 	def test_2
@@ -11,6 +12,11 @@ class Addition_test < Minitest::Test
 		assert_equal(14, add(num1,num2))
 	end	
 
+	def test_3
+		x = 10
+		y = 5
+		assert_equal(15, add2(x,y))
+	end
 end
 
 
